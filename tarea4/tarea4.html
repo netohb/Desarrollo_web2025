@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación múltiple</title>
+</head>
+
+<body>
+    <h1> Investigación múltiple</h1>
+    <p> Aquí expondré los ejemplos de cada uno de los usos de las etiquetas, mientras que en el pdf, se encuentra toda
+        la
+        parte teórica.</p>
+
+    <p><b>Uso de "&lt;strong&gt;"</b></p>
+
+    <p><strong>Importante:</strong> Cierra la sesión al terminar.</p>
+
+    <p><b>Uso de "&lt;b&gt;"</b></p>
+    <p>Atajos: presiona <b>Ctrl</b> + <b>K</b>.</p>
+
+    <p><b>Uso de "&lt;em&gt;"</b></p>
+    <p>No dije que <em>tú</em> lo rompiste.</p>
+
+    <p><b>Uso de "&lt;i&gt;"</b></p>
+
+    <p>El término <i>zeitgeist</i> aparece con frecuencia.</p>
+
+    <p><b>Uso de "&lt;s&gt;"</b></p>
+    <p><s>$999</s> $749</p>
+
+    <p><b>Uso de "&lt;del&gt;"</b></p>
+
+    <p>
+        Se reemplazó:
+        <del datetime="2025-08-25">La entrega es el 20 de agosto.</del>
+        <ins datetime="2025-08-25">La entrega es el 27 de agosto.</ins>
+    </p>
+
+
+    <!-- Elementos de bloque -->
+    <p> <b> Elementos de Bloque: </b></p>
+    <div>Esto es un div (bloque genérico)</div>
+
+    <p>Esto es un párrafo</p>
+
+    <h1>Esto es un encabezado H1</h1>
+
+    <ul>
+        <li>Elemento de una lista desordenada</li>
+    </ul>
+
+    <ol>
+        <li>Elemento de una lista ordenada</li>
+    </ol>
+
+    <!-- Elementos en línea -->
+    <p> <b> Elementos en Línea: </b></p>
+
+
+    <span>Esto es un span (en línea genérico)</span>
+
+    <br>
+
+    <a href="#">Esto es un enlace</a>
+
+    <br>
+
+    <strong>Texto en negritas (semántico)</strong>
+
+    <br>
+
+    <em>Texto con énfasis (cursiva semántica)</em>
+
+    <br>
+
+    <img src="https://via.placeholder.com/50" alt="Imagen en línea">
+
+
+    <h2>Formulario</h2>
+
+    <form>
+        <!-- 1. Label + Input (7 tipos diferentes) -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+        <br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+
+        <br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password">
+
+        <br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" max="120">
+
+        <br><br>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <br><br>
+
+        <label for="color">Color favorito:</label>
+        <input type="color" id="color" name="color">
+
+        <br><br>
+
+        <label for="archivo">Sube un archivo:</label>
+        <input type="file" id="archivo" name="archivo">
+
+        <br><br>
+
+        <!-- 2. Textarea -->
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe aquí..."></textarea>
+
+        <br><br>
+
+        <!-- 3. Select y Option -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="mexico">México</option>
+            <option value="usa">Estados Unidos</option>
+            <option value="alemania">Alemania</option>
+            <option value="colombia">Colombia</option>
+        </select><br><br>
+
+        <!-- 4. Output -->
+        <label for="rango">Calificación:</label>
+        <input type="range" id="rango" name="rango" min="0" max="10" value="5" oninput="resultado.value = rango.value">
+        <output name="resultado" for="rango">5</output><br><br>
+
+        <!-- Botón para enviar -->
+        <input type="submit" value="Enviar">
+    </form>
+
+
+
+</body>
+
+</html>
