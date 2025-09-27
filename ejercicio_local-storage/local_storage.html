@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documemt</title>
+</head>
+
+<body>
+    <h1> Formulario con eventos de JS!!</h1>
+
+    <form id="perfilForm">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" required>
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="text" class="form-control" id="edad" required>
+        </div>
+
+        <br>
+
+        <select id="diaFavorito" name="diaFavorito" class="form-select" aria-label="Default select example" required>
+            <option value="" disabled selected>Día de la semana favorito</option>
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miércoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sábado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Contenedor para el mensaje persistente (se muestra solo si hay datos en localStorage) -->
+    <p id="mensaje" aria-live="polite" hidden></p>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
