@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 3: Cuenta Bancaria</title>
+</head>
+
+<body>
+    <h1>Cuenta Bancaria en JavaScript</h1>
+    <div id="resultado"></div>
+
+    <button onclick="depositar()">Depositar 500</button>
+    <button onclick="retirar()">Retirar 200</button>
+    <button onclick="mostrarSaldo()">Mostrar Saldo</button>
+
+    <!-- Importamos la clase -->
+    <script src="script.js"></script>
+
+    <script>
+        // Creamos una cuenta
+        const miCuenta = new CuentaBancaria("Neto", 1000, "MXN");
+
+        function depositar() {
+            const mensaje = miCuenta.depositar(500);
+            document.getElementById("resultado").innerHTML = mensaje;
+            console.log(mensaje);
+        }
+
+        function retirar() {
+            const mensaje = miCuenta.retirar(200);
+            document.getElementById("resultado").innerHTML = mensaje;
+            console.log(mensaje);
+        }
+
+        function mostrarSaldo() {
+            const mensaje = miCuenta.mostrarSaldo();
+            document.getElementById("resultado").innerHTML = mensaje;
+            console.log(mensaje);
+        }
+    </script>
+</body>
+
+</html>
