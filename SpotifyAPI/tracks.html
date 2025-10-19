@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Spotify Artist Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="track-profile.js" defer></script>
+
+    <style>
+        .brand-title {
+            font-weight: 800;
+            background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+
+        .header-card {
+            border: 0;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(17, 24, 39, .08);
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .label-strong {
+            font-weight: 700;
+            color: #111827;
+        }
+    </style>
+</head>
+
+<body class="container py-5">
+
+
+    <h1 class="display-6 brand-title mb-4">Spotify Artists Info</h1>
+
+
+    <div class="card header-card mb-4">
+        <div class="card-body p-4">
+            <div class="row g-3 align-items-end">
+
+                <div class="col-12 col-lg-6">
+                    <label for="token" class="form-label label-strong">Access token</label>
+                    <input class="form-control form-control-lg" type="text" id="token"
+                        placeholder="Pega aquí tu Bearer token" />
+                    <div class="form-text">Obtén el token desde <code>auth.html</code>. Dura ~1 hora.</div>
+                </div>
+
+
+                <div class="col-12 col-md-5 col-lg-4">
+                    <label for="track-id" class="form-label label-strong">Artista</label>
+                    <select class="form-select form-select-lg" id="track-id">
+
+                        <option value="4mN0qcMxWX8oToqfDPM5yV">José José</option>
+                        <option value="2Bxd65U2Ar7gDO23XuyFad">Grupo Marrano</option>
+                        <option value="07PdYoE4jVRF6Ut40GgVSP">Cartel de Santa</option>
+                        <option value="4PPoI9LuYeFX8V674Z1R6l">Vicente Fernández</option>
+                        <option value="2nszmSgqreHSdJA3zWPyrW">Luis Miguel</option>
+                        <option value="4q3ewBCX7sLwd24euuV69X">Bad Bunny</option>
+                        <option value="5LeiVcEnsZcwc133TUhJNW">Belinda</option>
+                        <option value="1uNFoZAHBGtllmzznpCI3s">Justin Bieber</option>
+                        <option value="0fIdQWpwzU2oEtsoyArDOL">Ramón Ayala</option>
+                        <option value="53XhwfbYqKCa1cC15pYq2q">Imagine Dragons</option>
+                        <option value="5ElmrKGEi9pEVjsuYRhsgq">Lil Leob</option>
+                        <option value="6GRwwWAtmusrgAL5JF9Dfr">Callejero Fino</option>
+                        <option value="0VZrPa7mWAYXH4CwmYk8Km">Kidd Keo</option>
+                        <option value="3TVXtAsR1Inumwj472S9r4">Drake</option>
+                    </select>
+                </div>
+
+
+                <div class="col-12 col-md-7 col-lg-2 d-grid">
+                    <button class="btn btn-dark btn-lg" id="fetch-btn">Obtener artista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="track-info"></section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

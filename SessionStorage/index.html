@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de sessionStorage</title>
+</head>
+
+<body>
+    <h1>SessionStorage</h1>
+
+    <input type="text" id="clave" placeholder="Clave">
+    <input type="text" id="valor" placeholder="Valor">
+    <br><br>
+
+    <button
+        onclick="insertar(document.getElementById('clave').value, document.getElementById('valor').value)">Insertar</button>
+    <button onclick="alert(existe(document.getElementById('clave').value) ? 'Existe' : 'No existe')">Consultar</button>
+    <button onclick="eliminar(document.getElementById('clave').value)">Eliminar clave</button>
+    <button onclick="borrarTodo()">Borrar todo</button>
+
+    <script>
+
+        function insertar(key, value) {
+            sessionStorage.setItem(key, value);
+            alert("Dato insertado correctamente.");
+        }
+
+        function existe(key) {
+            return sessionStorage.getItem(key) !== null;
+        }
+
+        function eliminar(key) {
+            sessionStorage.removeItem(key);
+            alert("Dato eliminado (si existía).");
+        }
+
+        function borrarTodo() {
+            sessionStorage.clear();
+            alert("Se borró toda la información de sessionStorage.");
+        }
+    </script>
+</body>
+
+</html>
